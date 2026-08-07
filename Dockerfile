@@ -10,7 +10,7 @@ RUN corepack enable
 COPY package.json package-lock.json ./
 
 # Install all dependencies (including dev for building)
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 # Copy the rest of the application code
 COPY . .
